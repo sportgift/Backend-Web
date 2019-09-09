@@ -1,16 +1,27 @@
 plugins {
-    id 'java'
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
 }
 
-group 'sportgift.io'
-version '1.0.0-SNAPSHOT'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+ext {
+    springBootVersion = '2.1.6.RELEASE'
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+allprojects {
+    group = 'sportgift.io'
+    version = '1.0.0-SNAPSHOT'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+}
+
+subprojects {
+    apply plugin: 'io.spring.dependency-management'
+    dependencyManagement {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+        }
+    }
 }

@@ -1,2 +1,6 @@
 rootProject.name = 'sportgift-rest-root'
+include 'sportgift-rest-spec'
+include 'sportgift-rest-vo'
+include 'sportgift-rest-impl'
+include 'sportgift-rest-ws'
 
