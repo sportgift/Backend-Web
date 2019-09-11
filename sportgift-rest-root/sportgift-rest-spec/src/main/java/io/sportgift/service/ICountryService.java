@@ -2,6 +2,9 @@ package io.sportgift.service;
 
 import io.sportgift.model.Country;
 
+import java.util.Optional;
+import java.util.Set;
+
 /**
  * Country Service.
  *
@@ -11,4 +14,10 @@ import io.sportgift.model.Country;
 public interface ICountryService {
 
     Country save(Country country);
+
+    Optional<Country> get(Long id);
+
+    Iterable<Country> getAll();
+
+    Set<Country> getAll(Long size, Long page);
 }

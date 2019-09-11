@@ -1,8 +1,8 @@
 package io.sportgift.model;
 
-import lombok.*;
-import lombok.experimental.Accessors;
 import org.springframework.data.annotation.Id;
+
+import java.util.Objects;
 
 /**
  * Country model.
@@ -45,5 +45,18 @@ public class Country {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Country)) return false;
+        Country country = (Country) o;
+        return Objects.equals(name, country.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }

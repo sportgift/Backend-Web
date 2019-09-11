@@ -2,8 +2,10 @@ package io.sportgift.service;
 
 import io.sportgift.dao.ICountryDao;
 import io.sportgift.model.Country;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+import java.util.Set;
 
 /**
  * Default implementation of {@link ICountryService}.
@@ -24,4 +26,21 @@ public class CountryService implements ICountryService {
     public Country save(Country country) {
         return countryDao.save(country);
     }
+
+    @Override
+    public Optional<Country> get(Long id) {
+        return countryDao.findById(id);
+    }
+
+    @Override
+    public Iterable<Country> getAll() {
+        return countryDao.findAll();
+    }
+
+    @Override
+    public Set<Country> getAll(Long size, Long page) {
+        countryDao.
+        return countryDao.getAll(size, size*page);
+    }
+
 }

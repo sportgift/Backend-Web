@@ -3,11 +3,7 @@ package io.sportgift.ws.config;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
-import org.springframework.jdbc.core.JdbcTemplate;
-
-import javax.sql.DataSource;
 
 @SpringBootApplication(scanBasePackages = {
         "io.sportgift.ws.controller",
@@ -22,10 +18,4 @@ public class SportGiftRootApplication {
         SpringApplication springApplication = new SpringApplication(SportGiftRootApplication.class);
         springApplication.run(args);
     }
-
-    @Bean
-    public JdbcTemplate jdbcTemplate(DataSource dataSource){
-        return new JdbcTemplate(dataSource);
-    }
-
 }

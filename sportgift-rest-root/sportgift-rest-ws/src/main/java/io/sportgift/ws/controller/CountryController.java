@@ -7,17 +7,18 @@ import io.sportgift.vo.country.CountrySaveRequestVO;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Set;
 
-@RequestMapping("/country")
+/**
+ * Country Controller.
+ * @author Eduardo Alfonso Sanchez
+ * @since 1.0.0
+ */
+@RequestMapping("country")
 @RestController
 public class CountryController {
 
-    /*@Qualifier
-    private DataSource dataSource;*/
-
-    private final ICountryService countryService;
+   private final ICountryService countryService;
 
     public CountryController(ICountryService countryService) {
         this.countryService = countryService;
@@ -28,12 +29,13 @@ public class CountryController {
         return Mono.justOrEmpty(countryService.save(CountryMapper.countrySaveRequestVOCountry.apply(countrySaveRequestVO)));
     }
 
+    @GetMapping("{id}")
+    public Mono<Country> get(@PathVariable Long id) {
+        return Mono.justOrEmpty(countryService.get(id));
+    }
 
-    @GetMapping("/{id}")
-    public Mono<Map> get(Long id) {
-        Map<String, String> userInfo = new HashMap<>();
-        userInfo.put("name", "Jose");
-        userInfo.put("surname", "Marti Perez");
-        return Mono.justOrEmpty(userInfo);
+    @GetMapping
+    public Mono<Set<Country>> getAll(@RequestParam Long size, @RequestParam Long page) {
+        return Mono.justOrEmpty(countryService.getAll(size, page));
     }
 }
