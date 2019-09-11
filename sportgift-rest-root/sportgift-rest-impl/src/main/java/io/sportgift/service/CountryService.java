@@ -39,7 +39,6 @@ public class CountryService implements ICountryService {
 
     @Override
     public Set<Country> getAll(Long size, Long page) {
-        countryDao.
         return countryDao.getAll(size, size*page);
     }
 
