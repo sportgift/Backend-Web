@@ -1,5 +1,16 @@
 logging:
   level:
+    sql: debug
     ROOT: info
 server:
   port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/sportgift?useSSL=false
+    username: root
+    password: mysql
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 20
+      idle-timeout: 600000
+      max-lifetime: 1800000
