@@ -1,6 +1,6 @@
 package io.sportgift.service;
 
-import io.sportgift.dao.ICountryDao;
+import io.sportgift.repository.ICountryRepository;
 import io.sportgift.model.Country;
 import org.springframework.stereotype.Service;
 
@@ -16,9 +16,9 @@ import java.util.Set;
 @Service
 public class CountryService implements ICountryService {
 
-    private final ICountryDao countryDao;
+    private final ICountryRepository countryDao;
 
-    public CountryService(ICountryDao countryDao) {
+    public CountryService(ICountryRepository countryDao) {
         this.countryDao = countryDao;
     }
 
@@ -30,11 +30,6 @@ public class CountryService implements ICountryService {
     @Override
     public Optional<Country> get(Long id) {
         return countryDao.findById(id);
-    }
-
-    @Override
-    public Iterable<Country> getAll() {
-        return countryDao.findAll();
     }
 
     @Override

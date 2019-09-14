@@ -7,10 +7,10 @@ import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
 
 @SpringBootApplication(scanBasePackages = {
         "io.sportgift.ws.controller",
-        "io.sportgift.dao",
+        "io.sportgift.repository",
         "io.sportgift.service"
 })
-@EnableJdbcRepositories("io.sportgift.dao")
+@EnableJdbcRepositories("io.sportgift.repository")
 @Slf4j
 public class SportGiftRootApplication {
 

@@ -1,16 +1,18 @@
-package io.sportgift.vo.country;
+package io.sportgift.vo.city;
 
 import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Country Save Request VO.
+ * City Save Request VO.
  *
  * @author Eduardo Alfonso Sanchez
  * @since 1.0.0
  */
 @Getter
 @Setter
-public class CountrySaveRequestVO {
+public class CitySaveRequestVO {
+    private Long countryId;
+
     private String name;
 }

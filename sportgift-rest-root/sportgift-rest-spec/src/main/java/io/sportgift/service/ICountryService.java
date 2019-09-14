@@ -13,11 +13,28 @@ import java.util.Set;
  */
 public interface ICountryService {
 
+    /**
+     * Save.
+     *
+     * @param country The country to save
+     * @return The country saved
+     */
     Country save(Country country);
 
+    /**
+     * Get the country by id.
+     *
+     * @param id The country id
+     * @return The country if exist
+     */
     Optional<Country> get(Long id);
 
-    Iterable<Country> getAll();
-
+    /**
+     * Get all Country.
+     *
+     * @param size The size of page
+     * @param page The page index
+     * @return The list of country
+     */
     Set<Country> getAll(Long size, Long page);
 }
