@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
  */
 @EqualsAndHashCode(of = {"cityId", "name"})
 @ToString
-@RequiredArgsConstructor
 @Getter
 @Setter
 public class Competitor {
@@ -22,11 +21,11 @@ public class Competitor {
     @Id
     private Long id;
 
-    private final String name;
+    private String name;
 
-    private final String username;
+    private String username;
 
-    private final String password;
+    private String password;
 
     private String avatar;
 
@@ -34,7 +33,7 @@ public class Competitor {
 
     private Float height;
 
-    private final Character gender;
+    private Character gender;
 
     private LocalDate dateBirth;
 
