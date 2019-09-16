@@ -10,7 +10,7 @@ import org.springframework.data.annotation.Id;
  * @author Eduardo Alfonso Sanchez
  * @since 1.0.0
  */
-@EqualsAndHashCode(of = "name")
+@EqualsAndHashCode(of = {"countryId", "name"})
 @ToString
 @RequiredArgsConstructor
 @Getter
