@@ -37,7 +37,7 @@ public class Competitor {
 
     private LocalDate dateBirth;
 
-    private final Long cityId;
+    private Long cityId;
 
     private String address;
 
@@ -47,8 +47,44 @@ public class Competitor {
 
     private String twitter;
 
-    private final LocalDateTime registration;
+    private LocalDateTime registration;
 
     private Boolean status;
 
+    /**
+     * Constructor.
+     *
+     * @param name
+     * @param username
+     * @param password
+     * @param avatar
+     * @param weight
+     * @param height
+     * @param gender
+     * @param dateBirth
+     * @param cityId
+     * @param address
+     * @param facebook
+     * @param instagram
+     * @param twitter
+     * @param registration
+     * @param status
+     */
+    public Competitor(String name, String username, String password, String avatar, Float weight, Float height, Character gender, LocalDate dateBirth, Long cityId, String address, String facebook, String instagram, String twitter, LocalDateTime registration, Boolean status) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.avatar = avatar;
+        this.weight = weight;
+        this.height = height;
+        this.gender = gender;
+        this.dateBirth = dateBirth;
+        this.cityId = cityId;
+        this.address = address;
+        this.facebook = facebook;
+        this.instagram = instagram;
+        this.twitter = twitter;
+        this.registration = registration;
+        this.status = status;
+    }
 }

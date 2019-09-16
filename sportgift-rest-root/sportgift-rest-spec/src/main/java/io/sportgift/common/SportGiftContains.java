@@ -1,8 +1,10 @@
-package io.sportgift;
+package io.sportgift.common;
 
 public abstract class SportGiftContains {
 
     public static final Integer PAGINATION_DEFAULT_PAGE_SIZE = 10;
 
     public static final String PAGINATION_DEFAULT_PAGE_SIZE_AS_STRING = "10";
+
+    public static final String PASSWORD_HIDE = "[PROTECTED]";
 }

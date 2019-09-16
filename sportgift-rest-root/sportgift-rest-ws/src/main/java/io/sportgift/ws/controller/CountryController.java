@@ -1,6 +1,6 @@
 package io.sportgift.ws.controller;
 
-import io.sportgift.SportGiftContains;
+import io.sportgift.common.SportGiftContains;
 import io.sportgift.mapper.CountryMapper;
 import io.sportgift.model.Country;
 import io.sportgift.service.ICountryService;

@@ -1,5 +1,6 @@
 package io.sportgift.service;
 
+import io.sportgift.common.SportGiftContains;
 import io.sportgift.model.Competitor;
 import io.sportgift.repository.ICompetitorRepository;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,8 @@ public class CompetitorService implements ICompetitorService {
      */
     @Override
     public Competitor save(Competitor competitor) {
-        return competitorRepository.save(competitor);
+        Competitor save = competitorRepository.save(competitor);
+        save.setPassword(SportGiftContains.PASSWORD_HIDE);
+        return save;
     }
 }
