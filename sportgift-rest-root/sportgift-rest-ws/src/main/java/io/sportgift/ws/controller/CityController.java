@@ -1,5 +1,6 @@
 package io.sportgift.ws.controller;
 
+import io.sportgift.common.SportGiftContains;
 import io.sportgift.mapper.CityMapper;
 import io.sportgift.model.City;
 import io.sportgift.service.ICityService;
@@ -36,7 +37,7 @@ public class CityController {
     }
 
     @GetMapping("country/{countryId}")
-    public Mono<Set<City>> getAll(@PathVariable Long countryId, @RequestParam Long size, @RequestParam Long page) {
+    public Mono<Set<City>> getAll(@PathVariable Long countryId, @RequestParam(required = false, defaultValue = SportGiftContains.PAGINATION_DEFAULT_PAGE_SIZE_AS_STRING) Long size, @RequestParam Long page) {
         return Mono.justOrEmpty(cityService.getAll(countryId, size, page));
     }
 }

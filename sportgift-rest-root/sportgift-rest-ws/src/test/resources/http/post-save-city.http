@@ -1,0 +1,11 @@
+POST http://localhost:8080/city
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "countryId" : 1,
+  "name":"Matanzas"
+}
+
+###
