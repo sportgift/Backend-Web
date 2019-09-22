@@ -71,7 +71,7 @@ public class Competitor {
      * @param instagram
      * @param twitter
      * @param registration
-     * @param status
+     * @param booleanStatus
      */
     public Competitor(String name, String username, String password, String avatar, Float weight, Float height, Character gender, LocalDate dateBirth, Long cityId, String address, String facebook, String instagram, String twitter, LocalDateTime registration, Boolean booleanStatus) {
         this.name = name;
