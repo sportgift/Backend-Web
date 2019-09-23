@@ -1,0 +1,8 @@
+POST http://localhost:8080/country
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "name":"SOME NAME COUNTRY"
+}
