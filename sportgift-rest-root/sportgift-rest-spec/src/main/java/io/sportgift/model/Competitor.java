@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 public class Competitor {
 
     @Id
-    private Long id;
+    private Integer id;
 
     private String name;
 
@@ -40,7 +40,7 @@ public class Competitor {
 
     private LocalDate dateBirth;
 
-    private Long cityId;
+    private Integer cityId;
 
     private String address;
 
@@ -73,7 +73,7 @@ public class Competitor {
      * @param registration
      * @param booleanStatus
      */
-    public Competitor(String name, String username, String password, String avatar, Float weight, Float height, Character gender, LocalDate dateBirth, Long cityId, String address, String facebook, String instagram, String twitter, LocalDateTime registration, Boolean booleanStatus) {
+    public Competitor(String name, String username, String password, String avatar, Float weight, Float height, Character gender, LocalDate dateBirth, Integer cityId, String address, String facebook, String instagram, String twitter, LocalDateTime registration, Boolean booleanStatus) {
         this.name = name;
         this.username = username;
         this.password = password;

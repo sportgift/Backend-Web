@@ -1,8 +1,11 @@
 package io.sportgift.common;
 
-public abstract class SportGiftContains {
-
-    public static final Integer PAGINATION_DEFAULT_PAGE_SIZE = 10;
+/**
+ * Sport Gift Conta
+ * @author Eduardo Alfonso Sanchez
+ * @since 1.0.0
+ */
+public abstract class SportGiftConstants {
 
     public static final String PAGINATION_DEFAULT_PAGE_SIZE_AS_STRING = "10";
 
