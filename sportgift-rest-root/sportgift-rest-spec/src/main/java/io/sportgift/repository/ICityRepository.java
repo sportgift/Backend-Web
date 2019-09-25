@@ -13,7 +13,7 @@ import java.util.Set;
  * @author Eduardo Alfonso Sanchez
  * @since 1.0.0
  */
-public interface ICityRepository extends PagingAndSortingRepository<City, Long> {
+public interface ICityRepository extends PagingAndSortingRepository<City, Integer> {
 
     @Query("SELECT * FROM city WHERE country_id = :countryId ORDER BY id lIMIT :size OFFSET :offset")
     Set<City> getAllByCountryId(@Param("countryId") Long countryId, @Param("size") Long size, @Param("offset") Long offset);

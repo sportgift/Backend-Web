@@ -9,5 +9,5 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  * @author Eduardo Alfonso Sanchez
  * @since 1.0.0
  */
-public interface ICompetitorRepository extends PagingAndSortingRepository<Competitor, Long> {
+public interface ICompetitorRepository extends PagingAndSortingRepository<Competitor, Integer> {
 }
