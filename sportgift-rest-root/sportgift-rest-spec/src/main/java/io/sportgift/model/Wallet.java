@@ -18,7 +18,10 @@ public class Wallet {
 
     @Id
     private Integer id;
+    
     private String address;
+    
     private Integer tokensWon;
+    
     private Integer competitorId;
 }

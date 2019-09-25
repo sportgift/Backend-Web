@@ -19,6 +19,8 @@ public class City {
 
     @Id
     private Integer id;
+    
     private final Integer countryId;
+    
     private final String name;
 }

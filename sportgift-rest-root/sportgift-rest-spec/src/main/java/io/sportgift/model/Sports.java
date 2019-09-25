@@ -1,12 +1,17 @@
 package io.sportgift.model;
 
-import lombok.*;
 import org.springframework.data.annotation.Id;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 /**
- * Country model.
+ * Sports model.
  *
- * @author Eduardo Alfonso Sanchez
+ * @author Christian Domenech
  * @since 1.0.0
  */
 @EqualsAndHashCode(of = {"name"})
@@ -14,11 +19,13 @@ import org.springframework.data.annotation.Id;
 @RequiredArgsConstructor
 @Getter
 @Setter
-public class Country {
+public class Sports {
     @Id
     private Integer id;
     
     private final String name;
+    
+    private final String icon;
     
     private short status;
 }
