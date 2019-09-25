@@ -12,7 +12,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CitySaveRequestVO {
-    private Long countryId;
+    private Integer countryId;
 
     private String name;
 }

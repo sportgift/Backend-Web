@@ -39,7 +39,7 @@ public class CityService implements ICityService {
      * {@inheritDoc}
      */
     @Override
-    public Optional<City> get(Long id) {
+    public Optional<City> get(Integer id) {
         return cityRepository.findById(id);
     }
 
@@ -47,7 +47,7 @@ public class CityService implements ICityService {
      * {@inheritDoc}
      */
     @Override
-    public Set<City> getAll(Long countryId, Long size, Long page) {
-        return cityRepository.getAllByCountryId(countryId, size, page);
+    public Set<City> getAll(Integer countryId, Integer size, Integer page) {
+        return cityRepository.getAllByCountryId(countryId, size, size * page);
     }
 }

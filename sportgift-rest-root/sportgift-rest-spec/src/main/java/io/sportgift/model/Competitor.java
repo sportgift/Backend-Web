@@ -1,9 +1,6 @@
 package io.sportgift.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
 import java.time.LocalDate;
@@ -15,6 +12,8 @@ import java.time.LocalDateTime;
  * @author Eduardo Alfonso Sanchez
  * @since 1.0.0
  */
+@NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(of = {"cityId", "name"})
 @ToString
 @Getter
@@ -71,9 +70,9 @@ public class Competitor {
      * @param instagram
      * @param twitter
      * @param registration
-     * @param booleanStatus
+     * @param status
      */
-    public Competitor(String name, String username, String password, String avatar, Float weight, Float height, Character gender, LocalDate dateBirth, Integer cityId, String address, String facebook, String instagram, String twitter, LocalDateTime registration, Boolean booleanStatus) {
+    public Competitor(String name, String username, String password, String avatar, Float weight, Float height, Character gender, LocalDate dateBirth, Integer cityId, String address, String facebook, String instagram, String twitter, LocalDateTime registration, Short status) {
         this.name = name;
         this.username = username;
         this.password = password;
@@ -88,7 +87,6 @@ public class Competitor {
         this.instagram = instagram;
         this.twitter = twitter;
         this.registration = registration;
-        if (booleanStatus) this.status = 1;
-        else this.status = 0;
+        this.status = status;
     }
 }

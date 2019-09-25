@@ -38,7 +38,7 @@ CREATE TABLE `competitor`
     `instagram`    varchar(255),
     `twitter`    varchar(255),
     `registration` DATETIME NOT NULL,
-    `status` BINARY NOT NULL,
+    `status` smallint NOT NULL,
 
     PRIMARY KEY (`id`),
     FOREIGN KEY (city_id) REFERENCES city (ID),
@@ -46,3 +46,15 @@ CREATE TABLE `competitor`
     UNIQUE KEY `username_competitor_unique` (`username`)
 );
 
+DROP TABLE IF EXISTS wallet;
+CREATE TABLE `wallet`
+(
+    `id`         int(11)      NOT NULL AUTO_INCREMENT,
+    `address`    varchar(100) NOT NULL,
+    `token_won`  int(11)      NOT NULL DEFAULT 0,
+    `competitor_id` int(11)   NOT NULL,
+    PRIMARY KEY (`id`, `competitor_id`),
+    FOREIGN KEY (competitor_id) REFERENCES competitor (ID),
+    UNIQUE KEY `id_wallet_unique` (`id`, `competitor_id`),
+    UNIQUE KEY `address_competitor_UNIQUE` (`address`, `competitor_id`)
+);

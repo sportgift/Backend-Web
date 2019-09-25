@@ -28,12 +28,12 @@ public class CountryService implements ICountryService {
     }
 
     @Override
-    public Optional<Country> get(Long id) {
+    public Optional<Country> get(Integer id) {
         return countryDao.findById(id);
     }
 
     @Override
-    public Set<Country> getAll(Long size, Long page) {
+    public Set<Country> getAll(Integer size, Integer page) {
         return countryDao.getAll(size, size*page);
     }
 

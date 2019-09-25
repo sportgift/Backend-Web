@@ -31,7 +31,7 @@ public class CompetitorSaveRequestVO {
 
     private LocalDate dateBirth;
 
-    private Long cityId;
+    private Integer cityId;
 
     private String address;
 

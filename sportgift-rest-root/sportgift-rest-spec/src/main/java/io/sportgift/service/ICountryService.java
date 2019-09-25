@@ -27,7 +27,7 @@ public interface ICountryService {
      * @param id The country id
      * @return The country if exist
      */
-    Optional<Country> get(Long id);
+    Optional<Country> get(Integer id);
 
     /**
      * Get all Country.
@@ -36,5 +36,5 @@ public interface ICountryService {
      * @param page The page index
      * @return The list of country
      */
-    Set<Country> getAll(Long size, Long page);
+    Set<Country> getAll(Integer size, Integer page);
 }

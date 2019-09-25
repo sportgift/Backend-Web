@@ -27,7 +27,7 @@ public interface ICityService {
      * @param id The city id
      * @return The city if exist
      */
-    Optional<City> get(Long id);
+    Optional<City> get(Integer id);
 
     /**
      * Get All city by country id.
@@ -36,5 +36,5 @@ public interface ICityService {
      * @param page The page index
      * @return The city list
      */
-    Set<City> getAll(Long countryId, Long size, Long page);
+    Set<City> getAll(Integer countryId, Integer size, Integer page);
 }

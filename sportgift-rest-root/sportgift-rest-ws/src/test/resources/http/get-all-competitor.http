@@ -1,0 +1,5 @@
+GET http://localhost:8080/competitor?page=0
+Accept: */*
+Cache-Control: no-cache
+
+###

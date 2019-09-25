@@ -5,6 +5,9 @@ import io.sportgift.model.Competitor;
 import io.sportgift.repository.ICompetitorRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+import java.util.Set;
+
 /**
  * Competitor Service.
  *
@@ -27,5 +30,17 @@ public class CompetitorService implements ICompetitorService {
         Competitor save = competitorRepository.save(competitor);
         save.setPassword(SportGiftConstants.PASSWORD_HIDE);
         return save;
+    }
+
+    @Override
+    public Optional<Competitor> get(Integer id) {
+        Optional<Competitor> competitorOptional = competitorRepository.findById(id);
+        competitorOptional.ifPresent(competitor -> competitor.setPassword(SportGiftConstants.PASSWORD_HIDE));
+        return competitorOptional;
+    }
+
+    @Override
+    public Set<Competitor> getAll(Integer size, Integer page) {
+        return competitorRepository.getAll(size, size*page);
     }
 }

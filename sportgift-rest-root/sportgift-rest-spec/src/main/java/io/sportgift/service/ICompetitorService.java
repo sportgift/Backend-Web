@@ -2,6 +2,9 @@ package io.sportgift.service;
 
 import io.sportgift.model.Competitor;
 
+import java.util.Optional;
+import java.util.Set;
+
 /**
  * Competitor Service.
  *
@@ -17,4 +20,21 @@ public interface ICompetitorService {
      * @return The competitor saved
      */
     Competitor save(Competitor competitor);
+
+    /**
+     * Get the competitor by id.
+     *
+     * @param id The competitor id
+     * @return The competitor if exist
+     */
+    Optional<Competitor> get(Integer id);
+
+    /**
+     * Get All Competitor.
+     *
+     * @param size The page size
+     * @param page The page index
+     * @return The competitor list
+     */
+    Set<Competitor> getAll(Integer size, Integer page);
 }

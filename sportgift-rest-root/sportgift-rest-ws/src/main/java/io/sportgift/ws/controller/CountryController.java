@@ -31,12 +31,12 @@ public class CountryController {
     }
 
     @GetMapping("{id}")
-    public Mono<Country> get(@PathVariable Long id) {
+    public Mono<Country> get(@PathVariable Integer id) {
         return Mono.justOrEmpty(countryService.get(id));
     }
 
     @GetMapping
-    public Mono<Set<Country>> getAll(@RequestParam(required = false, defaultValue = SportGiftConstants.PAGINATION_DEFAULT_PAGE_SIZE_AS_STRING) Long size, @RequestParam Long page) {
+    public Mono<Set<Country>> getAll(@RequestParam(required = false, defaultValue = SportGiftConstants.PAGINATION_DEFAULT_PAGE_SIZE_AS_STRING) Integer size, @RequestParam Integer page) {
         return Mono.justOrEmpty(countryService.getAll(size, page));
     }
 }

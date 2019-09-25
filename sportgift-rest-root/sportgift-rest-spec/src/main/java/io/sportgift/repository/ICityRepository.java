@@ -15,6 +15,6 @@ import java.util.Set;
  */
 public interface ICityRepository extends PagingAndSortingRepository<City, Integer> {
 
-    @Query("SELECT * FROM city WHERE country_id = :countryId ORDER BY id lIMIT :size OFFSET :offset")
-    Set<City> getAllByCountryId(@Param("countryId") Long countryId, @Param("size") Long size, @Param("offset") Long offset);
+    @Query("SELECT * FROM city WHERE country_id = :countryId ORDER BY id LIMIT :size OFFSET :offset")
+    Set<City> getAllByCountryId(@Param("countryId") Integer countryId, @Param("size") Integer size, @Param("offset") Integer offset);
 }
