@@ -16,6 +16,6 @@ import org.springframework.data.annotation.Id;
 @Setter
 public class Country {
     @Id
-    private Integer id;
+    private Long id;
     private final String name;
 }

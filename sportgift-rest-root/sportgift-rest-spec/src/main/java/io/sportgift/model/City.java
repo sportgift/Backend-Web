@@ -18,7 +18,7 @@ import org.springframework.data.annotation.Id;
 public class City {
 
     @Id
-    private Integer id;
+    private Long id;
     private final Long countryId;
     private final String name;
 }

@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 public class Competitor {
 
     @Id
-    private Integer id;
+    private Long id;
 
     private String name;
 
