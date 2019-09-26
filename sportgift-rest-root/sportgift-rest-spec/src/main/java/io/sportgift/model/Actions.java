@@ -28,7 +28,7 @@ public class Actions {
     
     private String name;
     
-    private Sports sport;
+    private Integer sportId;
     
     private short status;
 

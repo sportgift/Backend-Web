@@ -1,5 +1,7 @@
 package io.sportgift.model;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
@@ -10,7 +12,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * Route model.
+ * Challenge model.
  *
  * @author Christian Domenech
  * @since 1.0.0
@@ -21,17 +23,24 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-public class Route {
+public class Challenge {
 	
-    @Id
-    private Integer id;
-    
-    private String name;
-    
-    private Integer countryId;
-    
-    private Integer cityId;
-    
-    private short status;    
- 
+	 @Id
+	 private Integer id;
+	 
+	 private String name;
+	 
+	 private Date startDate;
+	 
+	 private Date endDate;
+	 
+	 private Integer maximumParticipants;/* check  */
+	 
+	 private Integer sportId;
+	 
+	 private Integer sponsoringCompanyId;
+	 
+	 private short status; /* check */ 
+	 
+	 
 }

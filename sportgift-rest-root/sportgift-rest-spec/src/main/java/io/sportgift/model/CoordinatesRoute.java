@@ -10,28 +10,26 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * Route model.
+ * CoordinatesRoute model.
  *
  * @author Christian Domenech
  * @since 1.0.0
  */
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = {"name"})
+@EqualsAndHashCode(of = {"id","latitude","length"})
 @ToString
 @Getter
 @Setter
-public class Route {
+public class CoordinatesRoute {
+
+	@Id
+	private Integer id;
 	
-    @Id
-    private Integer id;
-    
-    private String name;
-    
-    private Integer countryId;
-    
-    private Integer cityId;
-    
-    private short status;    
- 
+	private Integer routeId;
+	
+	private Double latitude;
+	
+	private Double length;
+	
 }

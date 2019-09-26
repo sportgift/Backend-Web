@@ -1,5 +1,7 @@
 package io.sportgift.model;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
@@ -10,28 +12,28 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * Route model.
+ * CompetitorChallenges model.
  *
  * @author Christian Domenech
  * @since 1.0.0
  */
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = {"name"})
+@EqualsAndHashCode(of = {"id","challengeId","competitorId"})
 @ToString
 @Getter
 @Setter
-public class Route {
-	
+public class CompetitorChallenges {
     @Id
     private Integer id;
     
-    private String name;
+    private Integer challengeId;
     
-    private Integer countryId;
+    private Integer competitorId;
     
-    private Integer cityId;
+    private Date participationDate;
     
-    private short status;    
- 
+    private String finalStatus;
+    
+
 }

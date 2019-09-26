@@ -10,28 +10,28 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * Route model.
+ * CompetitorAwards model.
  *
  * @author Christian Domenech
  * @since 1.0.0
  */
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = {"name"})
+@EqualsAndHashCode(of = {"id","promotionsAwardsId","competitorId"})
 @ToString
 @Getter
 @Setter
-public class Route {
+public class CompetitorAwards {
 	
-    @Id
-    private Integer id;
-    
-    private String name;
-    
-    private Integer countryId;
-    
-    private Integer cityId;
-    
-    private short status;    
- 
+	@Id
+	private Integer id;
+	
+	private Integer promotionsAwardsId;
+	
+	private Integer competitorId;
+	
+	private Integer competitorChallengeId;
+	
+	private short status;
+
 }

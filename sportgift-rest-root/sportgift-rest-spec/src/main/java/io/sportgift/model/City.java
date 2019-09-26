@@ -23,4 +23,6 @@ public class City {
     private final Integer countryId;
     
     private final String name;
+    
+    private short status;
 }

@@ -1,5 +1,7 @@
 package io.sportgift.model;
 
+import java.util.Date;
+
 import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
@@ -10,28 +12,31 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * Route model.
+ * Advertising model.
  *
  * @author Christian Domenech
  * @since 1.0.0
  */
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = {"name"})
+@EqualsAndHashCode(of = {"description"})
 @ToString
 @Getter
 @Setter
-public class Route {
-	
-    @Id
-    private Integer id;
-    
-    private String name;
-    
-    private Integer countryId;
-    
-    private Integer cityId;
-    
-    private short status;    
- 
+public class Advertising {
+	 @Id
+	 private Integer id;
+	 
+	 private Integer sponsoringCompanyId;
+	 
+	 private String description;
+	 
+	 private Date creationDate;
+	 
+	 private Date expirationDate;
+	 
+	 private Integer rate;
+	 
+	 private short status;	 
+
 }
