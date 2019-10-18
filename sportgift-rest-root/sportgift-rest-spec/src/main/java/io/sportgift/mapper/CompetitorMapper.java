@@ -1,10 +1,10 @@
 package io.sportgift.mapper;
 
-import io.sportgift.model.Competitor;
-import io.sportgift.vo.competitor.CompetitorSaveRequestVO;
-
 import java.time.LocalDateTime;
 import java.util.function.Function;
+
+import io.sportgift.model.Competitor;
+import io.sportgift.vo.competitor.CompetitorSaveRequestVO;
 
 /**
  * City Mapper.

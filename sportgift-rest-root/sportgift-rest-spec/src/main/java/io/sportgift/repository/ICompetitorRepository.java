@@ -1,12 +1,13 @@
 package io.sportgift.repository;
 
-import io.sportgift.common.SportGiftConstants;
-import io.sportgift.model.Competitor;
+import java.util.Set;
+
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 
-import java.util.Set;
+import io.sportgift.common.SportGiftConstants;
+import io.sportgift.model.Competitor;
 
 /**
  * Competitor Repository.

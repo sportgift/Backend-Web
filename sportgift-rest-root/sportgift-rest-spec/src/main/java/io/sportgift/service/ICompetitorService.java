@@ -1,9 +1,9 @@
 package io.sportgift.service;
 
-import io.sportgift.model.Competitor;
-
 import java.util.Optional;
 import java.util.Set;
+
+import io.sportgift.model.Competitor;
 
 /**
  * Competitor Service.

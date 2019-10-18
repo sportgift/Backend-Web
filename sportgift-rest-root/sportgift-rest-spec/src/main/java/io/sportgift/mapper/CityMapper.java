@@ -1,9 +1,9 @@
 package io.sportgift.mapper;
 
+import java.util.function.Function;
+
 import io.sportgift.model.City;
 import io.sportgift.vo.city.CitySaveRequestVO;
-
-import java.util.function.Function;
 
 /**
  * City Mapper.

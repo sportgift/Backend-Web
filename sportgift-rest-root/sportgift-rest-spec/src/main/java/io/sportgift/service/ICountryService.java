@@ -1,9 +1,9 @@
 package io.sportgift.service;
 
-import io.sportgift.model.Country;
-
 import java.util.Optional;
 import java.util.Set;
+
+import io.sportgift.model.Country;
 
 /**
  * Country Service.

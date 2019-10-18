@@ -1,0 +1,4 @@
+*.http
+*.sql
+*.class
+*.yml

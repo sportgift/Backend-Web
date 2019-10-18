@@ -1,11 +1,12 @@
 package io.sportgift.service;
 
-import io.sportgift.model.City;
-import io.sportgift.repository.ICityRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 import java.util.Set;
+
+import org.springframework.stereotype.Service;
+
+import io.sportgift.model.City;
+import io.sportgift.repository.ICityRepository;
 
 /**
  * Default City Service.

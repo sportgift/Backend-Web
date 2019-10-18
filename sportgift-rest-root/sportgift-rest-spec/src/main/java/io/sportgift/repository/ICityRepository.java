@@ -1,11 +1,12 @@
 package io.sportgift.repository;
 
-import io.sportgift.model.City;
+import java.util.Set;
+
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 
-import java.util.Set;
+import io.sportgift.model.City;
 
 /**
  * City Repository.

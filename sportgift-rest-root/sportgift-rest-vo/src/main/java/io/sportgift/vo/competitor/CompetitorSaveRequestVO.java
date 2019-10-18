@@ -1,9 +1,9 @@
 package io.sportgift.vo.competitor;
 
+import java.time.LocalDate;
+
 import lombok.Getter;
 import lombok.Setter;
-
-import java.time.LocalDate;
 
 /**
  * Competitor Save Request VO.
