@@ -1,5 +1,5 @@
 spring:
-  profiles.active: develop
+  profiles.active: producction
 ---
 spring:
   profiles: develop
@@ -20,9 +20,9 @@ spring:
   profiles: producction
   datasource:
    type: com.zaxxer.hikari.HikariDataSource
-   url: jdbc:mysql://localhost/sportgift?useSSL=false
+   url: jdbc:mysql://localhost/sportgift_db?useSSL=false
    username: root
-   password: mysql
+   password: root
    hikari:
     connection-timeout: 60000
     maximum-pool-size: 20

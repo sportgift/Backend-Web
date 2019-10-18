@@ -1,12 +1,13 @@
 package io.sportgift.service;
 
+import java.util.Optional;
+import java.util.Set;
+
+import org.springframework.stereotype.Service;
+
 import io.sportgift.common.SportGiftConstants;
 import io.sportgift.model.Competitor;
 import io.sportgift.repository.ICompetitorRepository;
-import org.springframework.stereotype.Service;
-
-import java.util.Optional;
-import java.util.Set;
 
 /**
  * Competitor Service.

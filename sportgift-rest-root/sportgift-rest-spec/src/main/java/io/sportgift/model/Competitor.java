@@ -1,10 +1,16 @@
 package io.sportgift.model;
 
-import lombok.*;
-import org.springframework.data.annotation.Id;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+
+import org.springframework.data.annotation.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * Competitor model.
