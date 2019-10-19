@@ -5,6 +5,7 @@ import java.util.Optional;
 import io.sportgift.model.SponsoringCompany;
 
 /**
+ * Sponsoring Company
  * 
  * @author Christian
  *
