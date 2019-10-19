@@ -5,6 +5,7 @@ import java.util.Optional;
 import io.sportgift.model.Wallet;
 
 /**
+ * Wallet Service
  * 
  * @author Christian
  *

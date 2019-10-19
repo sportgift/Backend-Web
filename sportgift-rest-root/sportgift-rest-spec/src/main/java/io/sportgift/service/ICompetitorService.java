@@ -28,13 +28,14 @@ public interface ICompetitorService {
      * @return The competitor if exist
      */
     Optional<Competitor> get(Integer id);
-
+    
     /**
-     * Get All Competitor.
+     * Get All Competitor by competitor id.
      *
      * @param size The page size
      * @param page The page index
-     * @return The competitor list
+     * @return The Competitor list
      */
-    Set<Competitor> getAll(Integer size, Integer page);
+    Set<Competitor> getAll(Integer competitorId, Integer size, Integer page);
+
 }
